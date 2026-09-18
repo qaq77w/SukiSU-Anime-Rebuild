@@ -20,18 +20,11 @@ fun getGitCommitCount(): Int {
     return process.inputStream.bufferedReader().use { it.readText().trim().toInt() }
 }
 
-fun getGitDescribe(): String {
-    val process = Runtime.getRuntime().exec(arrayOf("git", "describe", "--tags", "--always", "--abbrev=0"))
-    return process.inputStream.bufferedReader().use { it.readText().trim() }
-}
+fun getRebuildCommitDelta(): Int =
+    (getGitCommitCount() - 1).coerceAtLeast(0)
 
-fun getVersionCode(): Int {
-    val commitCount = getGitCommitCount()
-    val major = 4
-    val end = 2815
-    return major * 10000 + commitCount - end
-}
+fun getVersionCode(): Int =
+    40922 + getRebuildCommitDelta()
 
-fun getVersionName(): String {
-    return getGitDescribe()
-}
+fun getVersionName(): String =
+    "1.0.0-dev.${getRebuildCommitDelta()}"
