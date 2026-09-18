@@ -8,3 +8,12 @@ __pycache__
 /dist
 /repack-config.json
 /userspace/ksud/.lkm_image_bootstrap.o
+# Local/private signing material
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+manager/local.properties
+local.properties
+.env
