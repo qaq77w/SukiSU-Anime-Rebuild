@@ -19,7 +19,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         var action = intent.getAction();
         if (!Intent.ACTION_LOCKED_BOOT_COMPLETED.equals(action)
                 && !Intent.ACTION_BOOT_COMPLETED.equals(action)
-                && !"com.sukisu.anime.magica.LAUNCH".equals(action)) {
+                && !"io.github.qaq77w.sukisu.anime.magica.LAUNCH".equals(action)) {
             return;
         }
         if (KsuCliKt.rootAvailable()) return;

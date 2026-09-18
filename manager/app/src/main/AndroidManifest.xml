@@ -152,7 +152,7 @@
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
             <intent-filter>
-                <action android:name="com.sukisu.anime.magica.LAUNCH" />
+                <action android:name="io.github.qaq77w.sukisu.anime.magica.LAUNCH" />
             </intent-filter>
         </receiver>
     </application>

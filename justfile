@@ -2,7 +2,7 @@ alias bk := build_ksud
 alias bm := build_manager
 
 build_ksud:
-    KSU_PACKAGE_NAME=com.sukisu.anime cross build --target aarch64-linux-android --release
+    KSU_PACKAGE_NAME=io.github.qaq77w.sukisu.anime cross build --target aarch64-linux-android --release
 
 build_manager: build_ksud
     cp target/aarch64-linux-android/release/ksud manager/app/src/main/jniLibs/arm64-v8a/libksud.so
